@@ -1,0 +1,28 @@
+{
+  "name": "ra-input-markdown",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "author": "Michael Malura <github@malura.de>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run build-cjs && yarn run build-esm",
+    "build-cjs": "rimraf ./lib && tsc",
+    "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
+    "watch": "rimraf ./lib && tsc --watch"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react-markdown": "^4.0.8",
+    "react-mde": "^7.3.2",
+    "showdown": "^1.9.0"
+  },
+  "peerDependencies": {
+    "ra-core": "^2.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
