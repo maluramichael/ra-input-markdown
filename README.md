@@ -2,6 +2,8 @@
 
 For editing Markdown with [react-admin](https://github.com/marmelab/react-admin), use the `<MarkdownInput>` component. It uses [react-med](https://github.com/andrerpena/react-mde), a popular React Markdown Editor.
 
+![`<MarkdownInput>` example](/screenshot.png?raw=true)
+
 ## Installation
 
 ```sh
