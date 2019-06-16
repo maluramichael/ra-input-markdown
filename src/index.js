@@ -62,7 +62,6 @@ class MarkdownInput extends Component {
   }
 }
 
-
 const MarkDownInputWithField = addField(withStyles(styles)(MarkdownInput));
 
 MarkDownInputWithField.defaultProps = {

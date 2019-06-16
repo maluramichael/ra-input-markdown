@@ -9,20 +9,55 @@
     "build": "yarn run build-cjs && yarn run build-esm",
     "build-cjs": "rimraf ./lib && tsc",
     "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
-    "watch": "rimraf ./lib && tsc --watch"
+    "watch": "rimraf ./lib && tsc --watch",
+    "test": "jest"
   },
   "devDependencies": {
-    "rimraf": "^2.6.3"
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^4.0.0-rc.0",
+    "babel-jest": "^24.8.0",
+    "css-loader": "^3.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "ra-core": "^2.9.2",
+    "react": "^16.8.6",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.34.0"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react-markdown": "^4.0.8",
-    "react-mde": "^7.3.2",
+    "react-mde": "^7.4.1",
     "showdown": "^1.9.0"
   },
   "peerDependencies": {
     "ra-core": "^2.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "babel": {
+    "ignore": [
+      "node_modules/**"
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-react"
+        ],
+        "plugins": [
+          "@babel/plugin-proposal-class-properties"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   }
 }
