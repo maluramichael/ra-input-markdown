@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import ReactMde from 'react-mde';
 import * as Showdown from 'showdown';
-import {addField} from 'ra-core';
-import {withStyles} from '@material-ui/core/styles';
-import 'react-mde/lib/styles/css/react-mde-all.css';
-
-import styles from './styles';
+import { addField } from 'ra-core';
 import PropTypes from 'prop-types';
 import FormControl from '@material-ui/core/FormControl';
+import { withStyles } from '@material-ui/core/styles';
+
+import 'react-mde/lib/styles/css/react-mde-all.css';
+
+const styles = {};
 
 class MarkdownInput extends Component {
   static propTypes = {
