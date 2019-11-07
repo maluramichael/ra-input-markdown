@@ -1,6 +1,6 @@
 {
   "name": "ra-input-markdown",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "author": "Michael Malura <github@malura.de>",
@@ -25,6 +25,7 @@
     "ra-core": "^2.9.2",
     "react": "^16.8.6",
     "rimraf": "^2.6.3",
+    "typescript": "^3.7.2",
     "webpack": "^4.34.0"
   },
   "dependencies": {
