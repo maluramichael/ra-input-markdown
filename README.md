@@ -7,9 +7,9 @@ For editing Markdown with [react-admin](https://github.com/marmelab/react-admin)
 ## Installation
 
 ```sh
-npm install ra-input-markdown --save-dev
+npm install --save ra-input-markdown
 # or
-yarn add --dev ra-input-markdown
+yarn add ra-input-markdown
 ```
 
 ## Usage
