@@ -27,15 +27,17 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "ra-core": "^2.9.2",
-    "react": "^16.8.6",
+    "react": "^16.13.1",
     "rimraf": "^2.6.3",
     "typescript": "^3.7.5",
     "webpack": "^4.34.0"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-markdown": "^4.0.9",
-    "react-mde": "^7.4.1",
+    "react-admin": "^3.7.0",
+    "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
+    "react-mde": "^10.1.0",
     "showdown": "^1.9.1"
   },
   "peerDependencies": {
