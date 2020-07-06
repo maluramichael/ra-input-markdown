@@ -1,5 +1,7 @@
 # `<MarkdownInput>` for react-admin
 
+[![npm](https://img.shields.io/npm/dm/ra-input-markdown)](https://www.npmjs.com/package/ra-input-markdown) [![npm](https://img.shields.io/npm/v/ra-input-markdown)](https://www.npmjs.com/package/ra-input-markdown)
+
 For editing Markdown with [react-admin](https://github.com/marmelab/react-admin), use the `<MarkdownInput>` component. It uses [react-med](https://github.com/andrerpena/react-mde), a popular React Markdown Editor.
 
 ![`<MarkdownInput>` example](/screenshot.png?raw=true)
