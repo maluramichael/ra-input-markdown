@@ -1,0 +1,10 @@
+src/
+lib/
+node_modules/
+yarn-error.log
+.gitignore
+.jsbeautifyrc
+.travis.yml
+screenshot.png
+yarn-error.log
+yarn.lock
