@@ -41,7 +41,7 @@
     "showdown": "^1.9.1"
   },
   "peerDependencies": {
-    "ra-core": "^2.9.9"
+    "ra-core": "^3.18.0"
   },
   "babel": {
     "ignore": [
