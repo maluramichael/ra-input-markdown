@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-admin": "^3.18.1",
+    "react-admin": "^3.19.12",
     "react-markdown": "^7.0.1",
     "react-mde": "^11.5.0",
     "showdown": "^1.9.1"
