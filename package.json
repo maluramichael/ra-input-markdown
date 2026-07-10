@@ -8,7 +8,7 @@
   },
   "module": "esm/index.js",
   "author": "Michael Malura <github@malura.de>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "yarn run build-cjs && yarn run build-esm",
     "build-cjs": "rimraf ./lib && tsc",
