@@ -1,6 +1,6 @@
 {
   "name": "ra-input-markdown",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A Markdown input (<MarkdownInput>) for react-admin, built on @uiw/react-md-editor.",
   "main": "lib/index.js",
   "module": "esm/index.js",
