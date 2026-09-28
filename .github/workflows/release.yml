@@ -1,0 +1,79 @@
+name: Release
+
+# Bumps the version and publishes to npm when a pull request is merged into
+# master. The bump level is taken from the PR label:
+#   - "major" -> npm version major
+#   - "minor" -> npm version minor
+#   - "patch" -> npm version patch
+# Without one of these labels nothing is released.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: >
+      github.event.pull_request.merged == true &&
+      (contains(github.event.pull_request.labels.*.name, 'major') ||
+       contains(github.event.pull_request.labels.*.name, 'minor') ||
+       contains(github.event.pull_request.labels.*.name, 'patch'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push the version bump commit and tag
+      id-token: write # npm provenance
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+      - name: Determine bump level
+        id: bump
+        run: |
+          if [ "${{ contains(github.event.pull_request.labels.*.name, 'major') }}" = "true" ]; then
+            echo "level=major" >> "$GITHUB_OUTPUT"
+          elif [ "${{ contains(github.event.pull_request.labels.*.name, 'minor') }}" = "true" ]; then
+            echo "level=minor" >> "$GITHUB_OUTPUT"
+          else
+            echo "level=patch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump version
+        run: |
+          npm version ${{ steps.bump.outputs.level }} -m "chore: release v%s"
+
+      - name: Push commit and tag
+        run: git push --follow-tags origin master
+
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
