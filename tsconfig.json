@@ -1,27 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES2019",
     "module": "commonjs",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "allowJs": true,
-    "jsx": "react",
-    "noImplicitAny": false,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react-jsx",
+    "declaration": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "strict": true,
     "outDir": "lib",
     "rootDir": "src"
   },
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.spec.js"
-  ],
   "include": [
     "src"
+  ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
   ]
 }
