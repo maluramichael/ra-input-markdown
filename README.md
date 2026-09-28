@@ -1,5 +1,11 @@
 # `<MarkdownInput>` for react-admin
 
+<!-- links:start -->
+[![Support me on Ko-fi](https://malura.de/assets/badge/kofi.svg)](https://malura.de/go/kofi?ref=ra-input-markdown)
+[![Check out my page](https://malura.de/assets/badge/malura.svg)](https://malura.de/go/site?ref=ra-input-markdown)
+[![npm](https://malura.de/badge/npm/ra-input-markdown.svg)](https://www.npmjs.com/package/ra-input-markdown)
+<!-- links:end -->
+
 [![npm](https://img.shields.io/npm/dm/ra-input-markdown)](https://www.npmjs.com/package/ra-input-markdown) [![npm](https://img.shields.io/npm/v/ra-input-markdown)](https://www.npmjs.com/package/ra-input-markdown)
 
 A Markdown input for [react-admin](https://github.com/marmelab/react-admin) 5. It wraps [@uiw/react-md-editor](https://github.com/uiwjs/react-md-editor) and binds it to the form with react-admin's `useInput` hook, so it behaves like any other input: validation, `defaultValue`, `format`/`parse` and helper text all work.
