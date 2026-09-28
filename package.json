@@ -34,6 +34,9 @@
   "dependencies": {
     "@uiw/react-md-editor": "^4.0.0"
   },
+  "overrides": {
+    "decode-uri-component": "^0.5.0"
+  },
   "peerDependencies": {
     "@mui/material": "^5.0.0 || ^6.0.0 || ^7.0.0",
     "react": "^18.0.0 || ^19.0.0",
@@ -53,6 +56,6 @@
     "react-dom": "^19.0.0",
     "rimraf": "^6.0.0",
     "typescript": "^5.6.0",
-    "vitest": "^2.1.0"
+    "vitest": "^5.0.2"
   }
 }
